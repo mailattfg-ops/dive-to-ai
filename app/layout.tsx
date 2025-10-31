@@ -1,26 +1,22 @@
-
-
 import type { Metadata } from "next";
-import { DM_Sans, Cal_Sans, Inter } from "next/font/google"; // Import both fonts
+import { DM_Sans, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
+const calSans = localFont({
+  src: "../public/font/cal-sans-latin-400-normal.woff2",
+  variable: "--font-cal-sans",
+});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
-  variable: "--font-dm-sans", 
+  variable: "--font-dm-sans",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter", 
-});
-
-
-const calSans = Cal_Sans({
-  subsets: ["latin"],
-  weight: ["400"], 
-  variable: "--font-cal-sans", 
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -28,14 +24,10 @@ export const metadata: Metadata = {
   description: "Empowering Businesses to Innovate with AI",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} ${calSans.variable}`}>
+      <body className={`${calSans.variable} ${dmSans.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>

@@ -1,0 +1,122 @@
+"use client";
+import SectionHeader from "./SectionHeader";
+import { Calendar, Trophy, Users, Target } from "lucide-react";
+
+export default function ChallengeSection() {
+  const calendar = "/calendar.png";
+
+  const stats = [
+    { value: "10,000+", label: "Businesses transformed" },
+    { value: "50,000+", label: "Hours of mentoring delivered" },
+    { value: "500+", label: "AI solutions implemented" },
+    { value: "100+", label: "Research Projects Supported" },
+  ];
+
+  const features = [
+    {
+      icon: <Calendar className="text-white text-lg" />,
+      title: "Structured Learning",
+      text: "28 days of carefully designed lessons and implementations",
+    },
+    {
+      icon: <Trophy className="text-white text-lg" />,
+      title: "Real Results",
+      text: "Implement working AI solutions by the end of the challenge",
+    },
+    {
+      icon: <Users className="text-white text-lg" />,
+      title: "Expert Mentoring",
+      text: "1-1 support from experienced AI implementation consultants",
+    },
+    {
+      icon: <Target className="text-white text-lg" />,
+      title: "Business Focused",
+      text: "Learn AI applications specific to your industry and goals",
+    },
+  ];
+
+  return (
+    <section className="bg-white text-center">
+      {/* First Section - Stats */}
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionHeader
+          eyebrow="Let's Understand"
+          description="Learn at your own pace and discover how AI can help your business grow"
+        >
+          <span className="text-purple-500 font-bold">DiveTo.AI</span> in action
+        </SectionHeader>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
+          {stats.map((stat, i) => (
+            <div key={i}>
+              <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
+              <p className="text-gray-600 mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    
+      <div className="max-w-7xl mx-auto px-6 mt-20">
+        <SectionHeader
+          eyebrow="Let's Understand"
+          description="From problem to product — learn to build real solutions using AI tools in just 14 days.
+Experience the power of applied AI through design, research, and development.
+Choose from tracks like Education, Food Tech, Retail, and E-commerce."
+        >
+          The <span className="text-purple-500 font-bold">14-Day</span> AI
+          Product Development Challenge
+        </SectionHeader>
+      </div>
+
+<div
+  className="relative w-full max-w-6xl mx-auto mt-10 rounded-3xl 
+  bg-gradient-to-br from-[#F9F5FF] via-[#F3E8FF] to-[#ECECFF]
+  shadow-[0_8px_30px_-8px_rgba(124,59,237,0.15)]
+  border border-[#E5D4FF]
+  px-6 py-8 md:px-12 md:py-10"
+>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+
+    <div className="space-y-6">
+      {features.map((feature, i) => (
+        <div key={i} className="flex items-start gap-4">
+          <div
+            className="flex items-center justify-center w-9 h-9 rounded-full 
+            bg-gradient-to-b from-[#AB5DFF] to-[#D2A8FF] 
+            shadow-[0_8px_20px_-6px_rgba(124,59,237,0.3)] shrink-0"
+          >
+            {feature.icon}
+          </div>
+
+          <div className="flex-1 leading-tight text-left">
+            <h3 className="font-semibold text-gray-900 text-base mb-1">
+              {feature.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-snug">
+              {feature.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+
+    <div className="flex flex-col items-center justify-center gap-4">
+      <img
+        src={calendar}
+        alt="28-Day Challenge"
+        className="w-full h-auto drop-shadow-xl"
+      />
+      <button className="bg-linear-to-r from-[#9C4DFF] to-[#7C3BED] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-200 p-4">
+        Join the 28-Day Challenge
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    </section>
+  );
+}

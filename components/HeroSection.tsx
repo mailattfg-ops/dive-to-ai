@@ -26,20 +26,16 @@ const HeroSection = () => {
       }}
     >
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4">
           Empowering Businesses
           <br /> to Innovate with <span className="text-[#AB5DFF]">AI</span>
         </h1>
-
-        {/* Subtext */}
         <p className="text-base md:text-lg text-[#828282] mb-10 max-w-3xl mx-auto">
           Master the power of Artificial Intelligence to transform your business —
           through hands-on implementation, consulting, and research-driven
           solutions.
         </p>
 
-        {/* 👇 Responsive Buttons */}
         <div className="flex flex-row font-cal-san  gap-0 md:gap-4 justify-center mb-8 md:mb-16 text-[7px] sm:text-sm md:text-base">
           <Link
             href="#"
@@ -57,7 +53,6 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        {/* 👇 Mobile join section */}
         <div className="relative flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 md:gap-3 bg-white/80 backdrop-blur-md pl-2 md:px-4 md:py-2 rounded-full shadow-md mb-6 md:hidden">
             <p className="font-semibold text-gray-800 text-[6px] sm:text-sm leading-snug">
@@ -83,7 +78,7 @@ const HeroSection = () => {
 
           <div className="relative flex flex-col items-center justify-center overflow-hidden mt-2 md:mt-16">
             <div className="relative w-full flex justify-center overflow-hidden h-[340px] sm:h-[400px] md:h-[620px]">
-              <div className="w-[200px] sm:w-[280px] md:w-[380px]">
+              <div className="w-[200px] sm:w-[280px] md:w-[350px]">
                 <Iphone videoSrc="https://videos.pexels.com/video-files/8946986/8946986-uhd_1440_2732_25fps.mp4" />
               </div>
             </div>
@@ -101,7 +96,7 @@ const HeroSection = () => {
       </div>
 
       
-      <div className="hidden md:flex absolute bottom-6 left-6 items-center gap-3 bg-white/40 backdrop-blur-md px-4 py-2 rounded-full shadow-md">
+      <div className="hidden md:flex absolute bottom-6 left-6 items-center gap-3 px-4 py-2 rounded-full ">
         <p className="font-semibold text-gray-800 text-xs sm:text-sm whitespace-nowrap">
           JOIN OVER 10,000 PROFESSIONALS
         </p>
