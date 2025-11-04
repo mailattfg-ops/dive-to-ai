@@ -80,7 +80,7 @@ export default function HowItWorks() {
   }, [steps.length]);
 
   return (
-    <section className="bg-white relative overflow-hidden">
+    <section className="bg-white py-4 relative overflow-hidden">
       <SectionHeader
         eyebrow="Let's Understand"
         description="Thousands of organizations trust DiveTo.AI to implement AI solutions.

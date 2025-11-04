@@ -38,7 +38,7 @@ export default function AiJourney() {
             Choose your own <span className="text-[#AB5DFF]">AI Journey</span>
         </SectionHeader>
 
-      <div className="max-w-6xl mx-auto mt-12 grid gap-8 md:grid-cols-3">
+      <div className="max-w-6xl mx-auto mt-12 grid gap-8 lg:grid-cols-3">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -59,7 +59,7 @@ export default function AiJourney() {
               <p className="text-gray-600 text-sm mt-2 grow">
                 {card.description}
               </p>
-              <button className="mt-4 bg-[#AB5DFF] hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-full transition-colors">
+              <button className="hidden md:block mt-4 bg-[#AB5DFF] hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-full transition-colors">
                 {card.button}
               </button>
             </div>

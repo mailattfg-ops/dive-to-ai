@@ -44,7 +44,7 @@ const faqData = [
 
 export default function FaqSection() {
   return (
-    <section className="py-20 bg-white text-gray-900">
+    <section className="py-8 md:py-20 bg-white text-gray-900">
       <div className="max-w-3xl mx-auto px-6">
         
         <div className="text-center">
@@ -66,7 +66,7 @@ export default function FaqSection() {
         <Accordion
           type="single"
           collapsible
-          className="w-full mt-12"
+          className="w-full mt-6 md:mt-12"
           defaultValue="1"
         >
           {faqData.map((item) => (

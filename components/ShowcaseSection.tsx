@@ -7,7 +7,7 @@ export default function LabsSection() {
 
 
   return (
-    <section className="py-10 md:py-20 bg-white text-center">
+    <section className="hidden md:block py-4 md:py-8 bg-white text-center">
       <div className="max-w-5xl mx-auto px-6">
 
         <SectionHeader
