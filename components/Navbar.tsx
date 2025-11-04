@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center"> 
           <Image 
             src="/Blacklogo.svg" 
-            alt="DiveTo.ai Logo" 
+            alt="Logo" 
             width={20} 
             height={32} 
             priority 

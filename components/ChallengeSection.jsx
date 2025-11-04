@@ -38,7 +38,7 @@ export default function ChallengeSection() {
   return (
     <section className="bg-white text-center">
       {/* First Section - Stats */}
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto mt-8 md:mt-2">
         <SectionHeader
           eyebrow="Let's Understand"
           description="Learn at your own pace and discover how AI can help your business grow"
@@ -46,7 +46,7 @@ export default function ChallengeSection() {
           <span className="text-purple-500 font-bold">DiveTo.AI</span> in action
         </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2">
           {stats.map((stat, i) => (
             <div key={i}>
               <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
@@ -56,8 +56,7 @@ export default function ChallengeSection() {
         </div>
       </div>
 
-    
-      <div className="max-w-7xl mx-auto px-6 mt-20">
+      <div className="max-w-6xl mx-auto mt-8 md:mt-10">
         <SectionHeader
           eyebrow="Let's Understand"
           description="From problem to product — learn to build real solutions using AI tools in just 14 days.
@@ -69,54 +68,49 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
         </SectionHeader>
       </div>
 
-<div
-  className="relative w-full max-w-6xl mx-auto mt-10 rounded-3xl 
-  bg-gradient-to-br from-[#F9F5FF] via-[#F3E8FF] to-[#ECECFF]
+      <div
+        className="relative w-full max-w-6xl mx-auto mt-10 rounded-3xl 
+  bg-linear-to-b from-[#F9F5FF] via-[#F3E8FF] to-[#ECECFF]
   shadow-[0_8px_30px_-8px_rgba(124,59,237,0.15)]
   border border-[#E5D4FF]
-  px-6 py-8 md:px-12 md:py-10"
->
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-    
-
-    <div className="space-y-6">
-      {features.map((feature, i) => (
-        <div key={i} className="flex items-start gap-4">
-          <div
-            className="flex items-center justify-center w-9 h-9 rounded-full 
-            bg-gradient-to-b from-[#AB5DFF] to-[#D2A8FF] 
-            shadow-[0_8px_20px_-6px_rgba(124,59,237,0.3)] shrink-0"
-          >
-            {feature.icon}
+  px-6 sm:px-8 md:px-12 py-10"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Left column - features */}
+          <div className="space-y-6">
+            {features.map((feature, i) => (
+              <div key={i} className="flex items-start gap-4">
+                <div
+                  className="flex items-center justify-center w-10 h-10 rounded-lg 
+              bg-linear-to-b from-[#AB5DFF] to-[#D2A8FF]
+              shadow-[0_8px_20px_-6px_rgba(124,59,237,0.3)] shrink-0"
+                >
+                  {feature.icon}
+                </div>
+                <div className="flex-1 text-left">
+                  <h3 className="font-semibold text-gray-900 text-base md:text-lg mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg leading-snug">
+                    {feature.text}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="flex-1 leading-tight text-left">
-            <h3 className="font-semibold text-gray-900 text-base mb-1">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 text-sm leading-snug">
-              {feature.text}
-            </p>
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src={calendar}
+              alt="28-Day Challenge"
+              className="hidden md:block w-full h-auto max-w-xl mx-auto drop-shadow-2xl"
+            />
+            <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-medium rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
+              Join the 28-Day Challenge
+            </button>
           </div>
         </div>
-      ))}
-    </div>
-
-
-    <div className="flex flex-col items-center justify-center gap-4">
-      <img
-        src={calendar}
-        alt="28-Day Challenge"
-        className="w-full h-auto drop-shadow-xl"
-      />
-      <button className="bg-linear-to-r from-[#9C4DFF] to-[#7C3BED] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-200 p-4">
-        Join the 28-Day Challenge
-      </button>
-    </div>
-  </div>
-</div>
-
-
+      </div>
     </section>
   );
 }

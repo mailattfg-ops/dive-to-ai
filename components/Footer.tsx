@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 mb-10">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mb-10">
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-0 text-white text-2xl font-bold">
               <Image
                 src="/logo.svg"
@@ -60,7 +60,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="hidden md:block">
             <h4 className="text-white font-semibold mb-3">Legal</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -81,7 +81,7 @@ export default function Footer() {
 
         <div className="text-center text-xs text-[#FFFFFF] space-y-2">
           <p>DiveTo.AI. All rights reserved. © 2025</p>
-          <p>
+          <p className="hidden md:block">
             DiveTo.AI as an educational and consultancy platform provides AI
             implementation guidance. Results may vary based on individual
             business needs and implementation.

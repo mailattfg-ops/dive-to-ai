@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import SectionHeader from "./SectionHeader";
 
 const expertiseData = [
   {
@@ -27,23 +28,12 @@ const expertiseData = [
   },
 ];
 
-// Logo data
-const logos = [
-  { name: "Techlify", icon: "T" },
-  { name: "Apply", icon: "A" },
-  { name: "Software", icon: "S" },
-  { name: "Startup", icon: "🚀" },
-  { name: "Camera", icon: "📷" },
-  { name: "Cloudly", icon: "☁️" },
-  { name: "Techlify", icon: "T" },
-  { name: "Apply", icon: "A" },
-];
 
 const ExpertiseSection = () => {
   return (
-    <section className="bg-white py-16 md:py-18 overflow-hidden">
+    <section className="bg-white py-4 md:py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <div className="text-center max-w-2xl mx-auto">
+        {/* <div className="text-center max-w-2xl mx-auto">
           <p className="font-cal text-sm font-semibold text-black tracking-wider">
             LIMITED TIME OFFER
           </p>
@@ -53,9 +43,16 @@ const ExpertiseSection = () => {
           <p className="mt-4 text-lg text-gray-600 md:mb-12">
             We specialize in AI implementation across multiple business areas:
           </p>
-        </div>
+        </div> */}
+        <SectionHeader eyebrow=" LIMITED TIME OFFER" description="We specialize in AI implementation across multiple business areas:">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
+            Our Expertise
+          </h2>
+        </SectionHeader>
+        <div className="mt-8 md:mt-14"></div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto border border-gray-300 rounded-3xl overflow-hidden">
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto border border-gray-300 rounded-3xl overflow-hidden">
           {expertiseData.map((item, i) => (
             <div
               key={i}
@@ -64,24 +61,24 @@ const ExpertiseSection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-84 object-cover"
+                className="w-full h-[280px] md:h-[340px] object-cover"
               />
 
               <div
-                className={`${item.color} absolute bottom-5 left-5 text-white px-4 py-2 rounded-xl flex flex-col items-center gap-2 backdrop-blur-md bg-opacity-90`}
+                className={`${item.color} absolute bottom-3 left-1 md:bottom-6 md:left-6 text-white px-4 py-2  rounded-xl flex flex-col items-center gap-2 backdrop-blur-md bg-opacity-90`}
               >
-                <p className="font-semibold text-sm md:text-base">
+                <p className="font-semibold text-xs md:text-base">
                   {item.title}
                 </p>
                 <span className="text-lg text-white">
-                  <img src={item.icon} className="w-full h-16 object-cover" />
+                  <img src={item.icon} className="w-full  h-8 md:h-16 object-cover" />
                 </span>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="mt-16 md:mt-24">
+      {/* <div className="mt-16 md:mt-24">
         <Marquee autoFill={true} pauseOnHover={false} speed={50}>
           <div className="flex items-center mx-8">
             <img
@@ -91,7 +88,7 @@ const ExpertiseSection = () => {
             />
           </div>
         </Marquee>
-      </div>
+      </div> */}
     </section>
   );
 };

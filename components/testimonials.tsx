@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Leah Andrews",
     title: "CEO Techsphere",
-    image: "/people1.jpg", 
+    image: "/people1.jpg",
     text: "Whether you’re a beginner or an expert, DiveTo.AI provides excellent resources to help you achieve your goals.",
   },
   {
@@ -26,9 +26,9 @@ const testimonials = [
     text: "Empowering developers with cutting-edge tools is our mission. Together, we code the future!",
   },
   {
-   name: "Leah Andrews",
+    name: "Leah Andrews",
     title: "CEO Techsphere",
-    image: "/people1.jpg", 
+    image: "/people1.jpg",
     text: "Whether you’re a beginner or an expert, DiveTo.AI provides excellent resources to help you achieve your goals.",
   },
   {
@@ -36,31 +36,37 @@ const testimonials = [
     title: "CMO Innovatech",
     image: "/people3.jpg",
     text: "Innovation drives success. At Innovatech, we leverage AI to transform ideas into reality.",
-
-  }
+  },
 ];
 
 export default function Testimonials() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className=" grid grid-cols-2 md:grid-cols-3 gap-6">
         {testimonials.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col sm:flex-row items-start gap-4 border border-[#D5D5D5] rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+            className="flex flex-col items-start gap-4 border border-[#D5D5D5] rounded-2xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-16 h-16 rounded-full object-cover"
-            />
-            <div>
-              <h3 className="font-semibold text-lg">{item.name}</h3>
-              <p className="text-sm text-[#808080] mb-2">{item.title}</p>
-              <p className="text-[#17171C] text-sm leading-relaxed">
-                “{item.text}”
-              </p>
+            <div className="flex items-center gap-3">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-8 h-8 md:w-16 md:h-16 rounded-full object-cover"
+              />
+
+              <div>
+                <h3 className="font-semibold text-base md:text-lg">
+                  {item.name}
+                </h3>
+                <p className=" text-xs md:text-sm text-[#808080]">
+                  {item.title}
+                </p>
+              </div>
             </div>
+            <p className="text-[#17171C] text-sm md:text-base leading-relaxed">
+              “{item.text}”
+            </p>
           </div>
         ))}
       </div>
