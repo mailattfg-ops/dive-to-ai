@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mb-10">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-0 text-white text-2xl font-bold">
+            <div className="flex items-center gap-0 text-white text-2xl">
               <Image
                 src="/logo.svg"
                 alt="DiveTo.ai Logo"
@@ -15,7 +15,7 @@ export default function Footer() {
                 height={32}
                 priority
               />
-              <span className="font-cal font-bold text-lg text-white">
+              <span className="font-cal text-lg text-white">
                 DiveTo.ai
               </span>
             </div>

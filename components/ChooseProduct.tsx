@@ -3,13 +3,13 @@ import SectionHeader from "./SectionHeader";
 export default function AiJourney() {
   const cards = [
     {
-      title: "AI Consulting for Businesses",
-      description:
-        "Get expert guidance to integrate AI into your workflow — from automation and analytics to marketing and customer experience.",
-      button: "Book a Consulting Call",
-      image:
-        "/product1.jpg",
-    },
+  title: "AI Consulting for Businesses",
+  description:
+    "Get expert guidance to integrate AI into your workflow — from automation and analytics to marketing and customer experience.\n→ Book a Consulting Call",
+  button: "Book a Consulting Call",
+  image: "/product1.jpg",
+}
+,
     {
       title: "AI Product R&D",
       description:
@@ -21,7 +21,7 @@ export default function AiJourney() {
     {
       title: "Learn with DiveTo.AI",
       description:
-        "Participate in hands-on experiences such as the 14-Day AI Product Development Challenge and the 28-Day AI Implementation Challenge.",
+        "Participate in our hands-on experiences, such as the 14-Day AI Product Development Challenge and the 28-Day AI Implementation Challenge, to master AI tools and create your own AI projects.",
       button: "Visit Learn with DiveToAI",
       image:
         "product3.jpg",
@@ -53,10 +53,10 @@ export default function AiJourney() {
              <div className="absolute inset-0 bg-linear-to-t from-[#FCFCFC]/50 to-transparent" />
             </div>
             <div className="p-6 flex flex-col grow text-center">
-              <h3 className="text-lg md:text-3xl font-bold text-[#AB5DFF]">
+              <h3 className="text-lg md:text-3xl font-cal text-[#AB5DFF]">
                 {card.title}
               </h3>
-              <p className="text-gray-600 text-sm mt-2 grow">
+              <p className="text-gray-600 text-sm mt-2 grow whitespace-pre-line">
                 {card.description}
               </p>
               <button className="hidden md:block mt-4 bg-[#AB5DFF] hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded-full transition-colors">

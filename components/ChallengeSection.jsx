@@ -36,17 +36,16 @@ export default function ChallengeSection() {
   ];
 
   return (
-    <section className="bg-white text-center">
-      {/* First Section - Stats */}
+    <section className="bg-white text-center px-4">
       <div className="max-w-7xl mx-auto mt-8 md:mt-2">
         <SectionHeader
           eyebrow="Let's Understand"
           description="Learn at your own pace and discover how AI can help your business grow"
         >
-          <span className="text-purple-500 font-bold">DiveTo.AI</span> in action
+          <span className="text-[#AB5DFF]">DiveTo.AI</span> in action
         </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-6">
           {stats.map((stat, i) => (
             <div key={i}>
               <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
@@ -63,8 +62,8 @@ export default function ChallengeSection() {
 Experience the power of applied AI through design, research, and development.
 Choose from tracks like Education, Food Tech, Retail, and E-commerce."
         >
-          The <span className="text-purple-500 font-bold">14-Day</span> AI
-          Product Development Challenge
+          The <span className="text-[#AB5DFF]">14-Day</span> AI Product
+          Development Challenge
         </SectionHeader>
       </div>
 
@@ -88,10 +87,10 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
                   {feature.icon}
                 </div>
                 <div className="flex-1 text-left">
-                  <h3 className="font-semibold text-gray-900 text-base md:text-lg mb-1">
+                  <h3 className="font-cal text-[#4C4C4C] text-base md:text-2xl">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-base md:text-lg leading-snug">
+                  <p className="text-[#71717A] text-base md:text-lg leading-snug">
                     {feature.text}
                   </p>
                 </div>
@@ -103,9 +102,9 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
             <img
               src={calendar}
               alt="28-Day Challenge"
-              className="hidden md:block w-full h-auto max-w-xl mx-auto drop-shadow-2xl"
+              className="hidden md:block w-full h-auto max-2w-x mx-auto drop-shadow-2xl"
             />
-            <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-medium rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
+            <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-cal rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
               Join the 28-Day Challenge
             </button>
           </div>

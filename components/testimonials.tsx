@@ -41,14 +41,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto">
       <div className=" grid grid-cols-2 md:grid-cols-3 gap-6">
         {testimonials.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col items-start gap-4 border border-[#D5D5D5] rounded-2xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+            className="flex flex-col items-start gap-4 border border-[#D5D5D5] rounded-3xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 font-sans">
               <img
                 src={item.image}
                 alt={item.name}
@@ -64,7 +64,7 @@ export default function Testimonials() {
                 </p>
               </div>
             </div>
-            <p className="text-[#17171C] text-sm md:text-base leading-relaxed">
+            <p className="text-[#17171C] text-sm md:text-base leading-relaxed font-sans">
               “{item.text}”
             </p>
           </div>

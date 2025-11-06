@@ -80,7 +80,7 @@ export default function HowItWorks() {
   }, [steps.length]);
 
   return (
-    <section className="bg-white py-4 relative overflow-hidden">
+    <section className="bg-white relative overflow-hidden">
       <SectionHeader
         eyebrow="Let's Understand"
         description="Thousands of organizations trust DiveTo.AI to implement AI solutions.
@@ -89,7 +89,7 @@ export default function HowItWorks() {
         How <span className="text-purple-500">DiveTo.AI</span> works
       </SectionHeader>
 
-      <div ref={containerRef} className="relative mt-16 max-w-5xl mx-auto">
+      <div ref={containerRef} className="relative mt-24 max-w-5xl mx-auto">
         <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 top-[-60px] bottom-[-60px] w-[3px] bg-linear-to-b from-transparent via-[#DCBAFF] to-transparent" />
         {dotPositions.length > 0 && (
           <div
@@ -103,11 +103,11 @@ export default function HowItWorks() {
         )}
 
         {/* Steps */}
-        <div className="flex flex-col gap-16 relative z-10">
+        <div className="flex flex-col gap-16   relative z-10">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`flex flex-row-reverse items-start gap-4 pl-4.5 md:pl-0 md:flex-row md:items-center md:justify-between md:gap-0 ${
+              className={`flex flex-row-reverse items-start gap-4 pl-4 md:pl-0 md:flex-row md:items-center md:justify-between md:gap-0 ${
                 step.side === "right" ? "md:flex-row-reverse" : ""
               }`}
             >

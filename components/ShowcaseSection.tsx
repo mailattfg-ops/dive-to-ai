@@ -17,14 +17,14 @@ export default function LabsSection() {
           models for industry-specific problems. We partner with startups, 
           educational institutions, and enterprises to explore new use cases in:"
         >
-          <span className="font-bold text-gray-900">
+          <span className="text-gray-900">
             DiveTo.AI Labs —{" "}
-            <span className="text-purple-600">R&D for the Future</span>
+            <span className="text-[#AB5DFF]">R&D for the Future</span>
           </span>
         </SectionHeader>
 
  
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:mt-8">
 
           <div className="contents md:flex md:flex-col md:gap-4">
             <GridItem
@@ -77,7 +77,7 @@ export default function LabsSection() {
 
 
         <div className="mt-10">
-          <button className="px-4 py-4 md:px-8 md:py-3 bg-[#AB5DFF] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-300">
+          <button className="px-4 py-4 md:px-6 md:py-4 bg-[#AB5DFF] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-300">
             Collaborate with DiveTo.AI Labs
           </button>
         </div>

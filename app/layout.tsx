@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const calSans = localFont({
-  src: "../public/font/cal-sans-latin-400-normal.woff2",
+  src: "../public/font/CalSans-Regular.ttf",
   variable: "--font-cal-sans",
 });
 

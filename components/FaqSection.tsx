@@ -49,9 +49,9 @@ export default function FaqSection() {
         
         <div className="text-center">
           <SectionHeader eyebrow="LET'S UNDERSTAND">
-            <span className="font-semibold text-gray-900">
+            <span className=" text-[#000000]">
               Frequently{" "}
-              <span className="text-purple-600 font-bold">
+              <span className="text-[#AB5DFF]">
                 Asked Questions
               </span>
             </span>
@@ -71,10 +71,10 @@ export default function FaqSection() {
         >
           {faqData.map((item) => (
             <AccordionItem value={String(item.id)} key={item.id}>
-              <AccordionTrigger className="text-lg font-medium text-left text-[#434343]">
+              <AccordionTrigger className="text-lg font-cal text-left text-[#434343]">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-base text-gray-600">
+              <AccordionContent className="font-sans text-base text-gray-600">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

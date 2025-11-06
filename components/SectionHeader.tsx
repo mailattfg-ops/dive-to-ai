@@ -13,13 +13,14 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="text-center w-full max-w-3xl mx-auto px-4">
-      <p className="text-sm uppercase text-[#0A1015] tracking-wide font-semibold">
+      <p className="text-sm uppercase text-[#0A1015] tracking-wide font-semibold font-sans mt-4 md:mt-8 ">
         {eyebrow}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold mt-2">
-        {children}
-      </h2>
-      <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+      <div className="text-3xl md:text-4xl font-cal mt-2">
+  {children}
+</div>
+
+      <p className="text-gray-500 mt-4 max-w-3xl mx-auto font-sans">
         {description}
       </p>
     </div>

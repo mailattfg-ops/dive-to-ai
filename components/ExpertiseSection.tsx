@@ -28,10 +28,9 @@ const expertiseData = [
   },
 ];
 
-
 const ExpertiseSection = () => {
   return (
-    <section className="bg-white py-4 md:py-8 overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         {/* <div className="text-center max-w-2xl mx-auto">
           <p className="font-cal text-sm font-semibold text-black tracking-wider">
@@ -44,15 +43,15 @@ const ExpertiseSection = () => {
             We specialize in AI implementation across multiple business areas:
           </p>
         </div> */}
-        <SectionHeader eyebrow=" LIMITED TIME OFFER" description="We specialize in AI implementation across multiple business areas:">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
-            Our Expertise
-          </h2>
+        <SectionHeader
+          eyebrow=" LIMITED TIME OFFER"
+          description="We specialize in AI implementation across multiple business areas:"
+        >
+          <h2 className="text-4xl md:text-5xl text-gray-900">Our Expertise</h2>
         </SectionHeader>
-        <div className="mt-8 md:mt-14"></div>
+        <div className="mt-8 md:mt-12"></div>
 
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto border border-gray-300 rounded-3xl overflow-hidden">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto border border-[#D5D5D5] rounded-3xl overflow-hidden">
           {expertiseData.map((item, i) => (
             <div
               key={i}
@@ -65,30 +64,34 @@ const ExpertiseSection = () => {
               />
 
               <div
-                className={`${item.color} absolute bottom-3 left-1 md:bottom-6 md:left-6 text-white px-4 py-2  rounded-xl flex flex-col items-center gap-2 backdrop-blur-md bg-opacity-90`}
+                className={`${item.color} absolute bottom-3 left-2 md:bottom-6 md:left-6 text-white
+  px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-xl flex flex-col items-center justify-center gap-2
+  backdrop-blur-md bg-opacity-90
+  w-32 h-20 md:w-48 md:h-28`}
               >
-                <p className="font-semibold text-xs md:text-base">
+                <p className="font-normal md:font-semibold text-xs md:text-base">
                   {item.title}
                 </p>
+
                 <span className="text-lg text-white">
-                  <img src={item.icon} className="w-full  h-8 md:h-16 object-cover" />
+                  <img src={item.icon} className="h-8 md:h-16 object-contain" />
                 </span>
               </div>
             </div>
           ))}
         </div>
       </div>
-      {/* <div className="mt-16 md:mt-24">
+      <div className="my-6 md:my-10">
         <Marquee autoFill={true} pauseOnHover={false} speed={50}>
           <div className="flex items-center mx-8">
             <img
               src="/marquee.png"
               alt="My Logo"
-              className="h-16 w-auto object-contain transition-transform duration-300"
+              className="h-6 w-auto object-contain transition-transform duration-300"
             />
           </div>
         </Marquee>
-      </div> */}
+      </div>
     </section>
   );
 };
