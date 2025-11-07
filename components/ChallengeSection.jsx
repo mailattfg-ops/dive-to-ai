@@ -1,12 +1,13 @@
 "use client";
 import SectionHeader from "./SectionHeader";
 import { Calendar, Trophy, Users, Target } from "lucide-react";
+import { VioletButton } from "./ui/violetButton";
 
 export default function ChallengeSection() {
   const calendar = "/calendar.png";
 
   const stats = [
-    { value: "10,000+", label: "Businesses transformed" },
+    { value: "10,000+", label: "Professionals Upskilled" },
     { value: "50,000+", label: "Hours of mentoring delivered" },
     { value: "500+", label: "AI solutions implemented" },
     { value: "100+", label: "Research Projects Supported" },
@@ -36,7 +37,7 @@ export default function ChallengeSection() {
   ];
 
   return (
-    <section className="bg-white text-center px-4">
+    <section className="bg-white text-center px-4 lg:px-8">
       <div className="max-w-7xl mx-auto mt-8 md:mt-2">
         <SectionHeader
           eyebrow="Let's Understand"
@@ -45,7 +46,7 @@ export default function ChallengeSection() {
           <span className="text-[#AB5DFF]">DiveTo.AI</span> in action
         </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-6">
           {stats.map((stat, i) => (
             <div key={i}>
               <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
@@ -104,9 +105,10 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
               alt="28-Day Challenge"
               className="hidden md:block w-full h-auto max-2w-x mx-auto drop-shadow-2xl"
             />
-            <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-cal rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
+            {/* <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-cal rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
               Join the 28-Day Challenge
-            </button>
+            </button> */}
+            <VioletButton className="px-6 py-3 md:px-0">Join the 28-Day Challenge</VioletButton>
           </div>
         </div>
       </div>

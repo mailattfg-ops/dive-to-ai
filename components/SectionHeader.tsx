@@ -20,7 +20,7 @@ export default function SectionHeader({
   {children}
 </div>
 
-      <p className="text-gray-500 mt-4 max-w-3xl mx-auto font-sans">
+      <p className="text-[#5C5C5C] mt-4 max-w-3xl mx-auto font-sans">
         {description}
       </p>
     </div>

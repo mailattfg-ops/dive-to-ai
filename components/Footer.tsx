@@ -3,88 +3,67 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 pt-16 pb-8">
+    <footer className="bg-black text-gray-400 pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 mb-10">
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-0 text-white text-2xl">
+
+        {/* Top Section */}
+        <div className="flex flex-col md:grid md:grid-cols-4 gap-10 mb-10">
+
+          {/* Logo + Description */}
+          <div className="flex flex-col items-start md:items-start col-span-1">
+            <div className="flex items-center gap-2 text-white text-xl">
               <Image
                 src="/logo.svg"
                 alt="DiveTo.ai Logo"
-                width={20}
-                height={32}
-                priority
+                width={24}
+                height={24}
               />
-              <span className="font-cal text-lg text-white">
-                DiveTo.ai
-              </span>
+              <span className="font-cal text-lg text-white">DiveTo.ai</span>
             </div>
-            <p className="text-sm text-white mt-3 leading-relaxed">
+            <p className="text-sm text-white mt-2 leading-relaxed max-w-xs">
               Your partner in AI implementation and business transformation
             </p>
           </div>
-          <div>
-            <h4 className="text-white font-semibold mb-3">Platform</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-white transition">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white transition">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white transition">
-                  28-Day Challenge
-                </a>
-              </li>
-            </ul>
-          </div>
 
-          <div>
-            <h4 className="text-white font-semibold mb-3">Support</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-white transition">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white transition">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Links Section */}
+          <div className="flex flex-col space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:col-span-3">
 
-          <div className="hidden md:block">
-            <h4 className="text-white font-semibold mb-3">Legal</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-white transition">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white transition">
-                  Terms & Conditions
-                </a>
-              </li>
-            </ul>
+            <div>
+              <h4 className="text-white font-semibold mb-2">Platform</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-white">Home</a></li>
+                <li><a href="#" className="text-white">Blog</a></li>
+                <li><a href="#" className="text-white">28-Day Challenge</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-semibold mb-2">Support</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-white">Help Center</a></li>
+                <li><a href="#" className="text-white">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-semibold mb-2">Legal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-white">Privacy Policy</a></li>
+                <li><a href="#" className="text-white">Terms & Conditions</a></li>
+              </ul>
+            </div>
+
           </div>
         </div>
 
-        <hr className="border-[#E4E4E7] mb-6" />
+        <hr className="border-gray-600 mb-4" />
 
-        <div className="text-center text-xs text-[#FFFFFF] space-y-2">
-          <p>DiveTo.AI. All rights reserved. © 2025</p>
-          <p className="hidden md:block">
-            DiveTo.AI as an educational and consultancy platform provides AI
-            implementation guidance. Results may vary based on individual
-            business needs and implementation.
+        {/* Bottom Text */}
+        <div className="text-center text-xs text-white space-y-2">
+          <p>DiveTo.AI. All rights reserved. © 2025</p> 
+          <p className="hidden md:block text-[#FFFFFF] md:text-[8px] max-w-4xl mx-auto">
+            DiveTo.AI as an educational and consultancy platform provides AI implementation guidance.
+            Results may vary based on individual business needs and implementation.
           </p>
         </div>
       </div>

@@ -42,34 +42,37 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div className="max-w-6xl mx-auto">
-      <div className=" grid grid-cols-2 md:grid-cols-3 gap-6">
-        {testimonials.map((item, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-start gap-4 border border-[#D5D5D5] rounded-3xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
-          >
-            <div className="flex items-center gap-3 font-sans">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-8 h-8 md:w-16 md:h-16 rounded-full object-cover"
-              />
-
-              <div>
-                <h3 className="font-semibold text-base md:text-lg">
-                  {item.name}
-                </h3>
-                <p className=" text-xs md:text-sm text-[#808080]">
-                  {item.title}
-                </p>
-              </div>
-            </div>
-            <p className="text-[#17171C] text-sm md:text-base leading-relaxed font-sans">
-              “{item.text}”
+   <div className="max-w-6xl mx-auto">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-4 md:p-8 xl:p-0">
+    {testimonials.map((item, i) => (
+      <div
+        key={i}
+        className="flex flex-col h-full justify-between border border-[#D5D5D5] rounded-3xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+      >
+        <div className="flex items-center gap-3 font-sans flex-shrink-0">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-8 h-8 md:w-16 md:h-16 rounded-full object-cover"
+          />
+          <div>
+            <h3 className="font-semibold text-[10px] md:text-lg leading-tight">
+              {item.name}
+            </h3>
+            <p className="text-[7px] md:text-sm text-[#808080] leading-tight">
+              {item.title}
             </p>
           </div>
-        ))}
+        </div>
+
+        <p className="text-[#17171C] text-[8px] md:text-base leading-relaxed font-sans mt-2">
+          “{item.text}”
+        </p>
       </div>
+    ))}
+  </div>
+</div>
+
     </div>
   );
 }

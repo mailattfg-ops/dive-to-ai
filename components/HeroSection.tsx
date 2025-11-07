@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Iphone } from "./ui/iphone";
+import { VioletButton } from "./ui/violetButton";
 
 const HeroSection = () => {
   return (
@@ -32,24 +33,24 @@ const HeroSection = () => {
         </p>
 
           <div className="flex flex-row gap-2 md:gap-8 justify-center mb-8 md:mb-0 text-[8px] md:text-lg font-cal">
-          <Link
+          {/* <Link
             href="#"
             className="bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center"
           >
             Book Your AI Strategy Call
-          </Link>
+          </Link> */}
+          <VioletButton>Book Your AI Strategy Call</VioletButton>
 
-          <Link
-            href="#"
+          <button
             className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center"
           >
             Explore the 14-Day Product Challenge
-          </Link>
+          </button>
         </div>
 
         <div className="relative flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 md:gap-4 pl-2 md:px-4 md:py-2 rounded-full mb-6 md:mb-0 md:mt-8 xl:hidden">
-            <p className="font-semibold font-sans text-gray-800 text-xs md:text-base leading-snug">
+            <p className="font-semibold font-sans text-black text-xs md:text-base leading-snug">
               JOIN OVER 10,000
               <br />
               PROFESSIONALS
@@ -73,15 +74,15 @@ const HeroSection = () => {
           </div>
 
           <div className="relative flex flex-col items-center justify-center overflow-visible mt-2 md:mt-8 xl:mt-16">
-            <div className="relative w-full flex justify-center overflow-hidden h-[60vw] md:h-[40vw] max-h-[620px]">
-              <div className="w-[50vw] md:w-[30vw] max-w-[380px]">
+            <div className="relative w-full flex justify-center overflow-hidden h-[60vw] md:h-[45vw] xl:h-[35vw] max-h-[620px]">
+              <div className="w-[50vw] md:w-[40vw] xl:w-[24vw] max-w-[380px]">
                 <Iphone className="mx-auto" />
               </div>
             </div>
 
             <div className="relative z-20 flex justify-center w-full">
-              <div className="w-[80vw] md:w-[50vw] max-w-[450px] bg-white text-gray-800 font-medium p-2 md:px-4 md:pt-4 md:pb-8 border-t border-l border-r border-[#B4B4B4] rounded-t-2xl md:rounded-t-4xl shadow-[4px_4px_30px_10px_rgba(0,0,0,0.15)]">
-                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-lg p-2 md:pb-4 md:pt-2 md:px-2 rounded-2xl text-center leading-snug">
+              <div className="w-[80vw] md:w-[50vw] max-w-[450px] bg-white text-gray-800 font-medium p-2 md:px-4 md:pt-4 md:pb-8 xl:px-4 xl:pt-4 xl:pb-2 border-t border-l border-r border-[#B4B4B4] rounded-t-2xl md:rounded-t-4xl shadow-[4px_4px_30px_10px_rgba(0,0,0,0.15)]">
+                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-lg p-2 md:pb-4 md:pt-2 md:px-2 xl:px-4 xl:py-4 rounded-2xl text-center leading-snug">
                   Create a Social Media Plan for my Company
                 </div>
               </div>
@@ -91,7 +92,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hidden xl:flex absolute bottom-6 left-6 items-center gap-3 px-4 py-2 rounded-full ">
-        <p className="font-semibold font-sans text-gray-800 text-lg whitespace-nowrap">
+        <p className="font-semibold font-sans text-black text-lg whitespace-nowrap">
           JOIN OVER 10,000
           <br />
           PROFESSIONALS
