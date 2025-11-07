@@ -27,7 +27,7 @@ export default function AiJourney() {
   ];
 
   return (
-    <section className="py-8 px-4 md:px-6 lg:px-8 text-center bg-white">
+    <section className="py-8 px-4 md:px-14 lg:px-8 text-center bg-white">
       <SectionHeader
         eyebrow="Let's Understand"
         description="Thousands of organizations trust DiveTo.AI to implement AI solutions.

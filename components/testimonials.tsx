@@ -43,7 +43,7 @@ export default function Testimonials() {
   return (
     <div className="max-w-6xl mx-auto">
    <div className="max-w-6xl mx-auto">
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-4 md:p-8 xl:p-0">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-2 xl:p-0">
     {testimonials.map((item, i) => (
       <div
         key={i}

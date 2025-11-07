@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <Link href="#" className="font-cal bg-black text-white rounded-full hover:bg-gray-800 transition-colors py-2 text-xs px-4 md:text-sm md:py-3 md:px-4">
+        <Link href="#" className="font-cal bg-black text-white rounded-full py-2 text-xs px-4 md:text-sm md:py-3 md:px-4">
           Get started
         </Link>
       </div>

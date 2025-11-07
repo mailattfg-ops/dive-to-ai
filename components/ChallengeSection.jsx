@@ -37,7 +37,7 @@ export default function ChallengeSection() {
   ];
 
   return (
-    <section className="bg-white text-center px-4 lg:px-8">
+    <section className="bg-white text-center px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto mt-8 md:mt-2">
         <SectionHeader
           eyebrow="Let's Understand"
@@ -103,12 +103,12 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
             <img
               src={calendar}
               alt="28-Day Challenge"
-              className="hidden md:block w-full h-auto max-2w-x mx-auto drop-shadow-2xl"
+              className="hidden md:block w-auto h-auto mx-auto drop-shadow-2xl"
             />
             {/* <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-cal rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
               Join the 28-Day Challenge
             </button> */}
-            <VioletButton className="px-2 py-2 md:px-8 md:py-3 ">
+            <VioletButton className="px-2 py-2 md:px-8 md:py-3 md:mt-28 lg:mt-0 ">
               Join the 28-Day Challenge
             </VioletButton>
           </div>

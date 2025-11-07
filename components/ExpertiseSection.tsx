@@ -31,7 +31,7 @@ const expertiseData = [
 const ExpertiseSection = () => {
   return (
     <section className="bg-white overflow-hidden pt-8 xl:pt-10">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-4 xl:px-16">
         {/* <div className="text-center max-w-2xl mx-auto">
           <p className="font-cal text-sm font-semibold text-black tracking-wider">
             LIMITED TIME OFFER
