@@ -73,7 +73,7 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
   bg-linear-to-b from-[#F9F5FF] via-[#F3E8FF] to-[#ECECFF]
   shadow-[0_8px_30px_-8px_rgba(124,59,237,0.15)]
   border border-[#E5D4FF]
-  px-6 sm:px-8 md:px-12 py-10"
+  px-6 md:px-10 py-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left column - features */}
@@ -108,7 +108,9 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
             {/* <button className="bg-[#AB5DFF] hover:opacity-90 text-white text-base md:text-lg font-cal rounded-full shadow-md transition-all duration-200 px-4 py-2 md:px-8 md:py-4">
               Join the 28-Day Challenge
             </button> */}
-            <VioletButton className="px-6 py-3 md:px-0">Join the 28-Day Challenge</VioletButton>
+            <VioletButton className="px-2 py-2 md:px-8 md:py-3 ">
+              Join the 28-Day Challenge
+            </VioletButton>
           </div>
         </div>
       </div>

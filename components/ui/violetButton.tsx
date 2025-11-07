@@ -8,7 +8,7 @@ interface VioletBtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export function VioletButton({ children, className = "", ...props }: VioletBtnProps) {
   return (
     <button
-      className={`bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full 
+      className={`bg-[#AB5DFF] text-white rounded-full 
       hover:bg-purple-700 transition-colors shadow-md text-center font-cal ${className}`}
       {...props}
     >

@@ -39,7 +39,7 @@ const HeroSection = () => {
           >
             Book Your AI Strategy Call
           </Link> */}
-          <VioletButton>Book Your AI Strategy Call</VioletButton>
+          <VioletButton className="px-2 py-2 md:px-8 md:py-3 ">Book Your AI Strategy Call</VioletButton>
 
           <button
             className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center"
@@ -82,7 +82,7 @@ const HeroSection = () => {
 
             <div className="relative z-20 flex justify-center w-full">
               <div className="w-[80vw] md:w-[50vw] max-w-[450px] bg-white text-gray-800 font-medium p-2 md:px-4 md:pt-4 md:pb-8 xl:px-4 xl:pt-4 xl:pb-2 border-t border-l border-r border-[#B4B4B4] rounded-t-2xl md:rounded-t-4xl shadow-[4px_4px_30px_10px_rgba(0,0,0,0.15)]">
-                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-lg p-2 md:pb-4 md:pt-2 md:px-2 xl:px-4 xl:py-4 rounded-2xl text-center leading-snug">
+                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-lg p-2 md:pb-4 md:pt-2 md:px-2 xl:px-4 xl:py-4 rounded-lg   md:rounded-2xl text-center leading-snug">
                   Create a Social Media Plan for my Company
                 </div>
               </div>

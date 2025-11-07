@@ -27,7 +27,7 @@ export default function AiJourney() {
   ];
 
   return (
-    <section className="py-8 px-4 md:px-10 lg:px-20 text-center bg-white">
+    <section className="py-8 px-4 md:px-6 lg:px-8 text-center bg-white">
       <SectionHeader
         eyebrow="Let's Understand"
         description="Thousands of organizations trust DiveTo.AI to implement AI solutions.
@@ -36,7 +36,7 @@ export default function AiJourney() {
         Choose your own <span className="text-[#AB5DFF]">AI Journey</span>
       </SectionHeader>
 
-      <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 gap-4 md:gap-4 lg:gap-2 md:grid-cols-2 lg:grid-cols-3">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -68,7 +68,7 @@ export default function AiJourney() {
               {/* <button className="mt-4 bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center">
                 {card.button}
               </button> */}
-              <VioletButton className="mt-2">{card.button}</VioletButton>
+              <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-8 py-4 md:w-full md:max-w-none text-sm  lg:text-base xl:text-lg">{card.button}</VioletButton>
             </div>
           </div>
         ))}

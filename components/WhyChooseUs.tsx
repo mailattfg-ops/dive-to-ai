@@ -36,7 +36,7 @@ export default function WhyChooseSection() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
           {features.map((item, index) => (
             <div key={index} className="px-4">
-              <h3 className="text-2xl md:text-3xl font-cal text-[#AB5DFF] mb-1 leading-none">
+              <h3 className="text-3xl lg:text-4xl font-cal text-[#AB5DFF] mb-1 leading-none">
                 <span className="block">{item.title.split(" ")[0]}</span>
                 {item.title.split(" ").slice(1).join(" ")}
               </h3>
