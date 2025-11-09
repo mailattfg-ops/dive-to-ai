@@ -47,7 +47,7 @@ export default function Testimonials() {
     {testimonials.map((item, i) => (
       <div
         key={i}
-        className="flex flex-col h-full border border-[#D5D5D5] rounded-3xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
+        className="flex flex-col h-full border border-[#D5D5D5] rounded-4xl p-2 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 bg-white"
       >
         <div className="flex items-center gap-3 font-sans shrink-0">
           <img

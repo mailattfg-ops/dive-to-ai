@@ -27,6 +27,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/HomeBackGround.png" />
+      </head>
       <body className={`${calSans.variable} ${dmSans.variable} ${inter.variable}`}>
         {children}
       </body>

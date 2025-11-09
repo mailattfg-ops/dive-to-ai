@@ -9,6 +9,7 @@ const HeroSection = () => {
     <section
       className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10"
       style={{
+         backgroundColor: "#E8D4FF",
         backgroundImage: `
     linear-gradient(180deg, rgba(171,93,255,0.8) 0%, white 100%),
     url("/HomeBackGround.png")
