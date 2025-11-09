@@ -36,12 +36,12 @@ export default function AiJourney() {
         Choose your own <span className="text-[#AB5DFF]">AI Journey</span>
       </SectionHeader>
 
-      <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 gap-4 md:gap-4 lg:gap-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {cards.map((card, index) => (
           <div
             key={index}
             className={`
-    rounded-2xl overflow-hidden shadow-xl transition-shadow duration-300 
+    rounded-4xl overflow-hidden shadow-xl transition-shadow duration-300 
     flex flex-col border border-[#C3C3C3]
     ${
       index === 2
@@ -56,7 +56,8 @@ export default function AiJourney() {
                 alt={card.title}
                 className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#FCFCFC]/50 to-transparent" />
+             <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white via-white/80 to-transparent" />
+
             </div>
             <div className="p-6 flex flex-col grow text-center">
               <h3 className="text-lg md:text-3xl font-cal text-[#AB5DFF]">
