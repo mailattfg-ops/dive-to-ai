@@ -29,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="preload" as="image" href="/HomeBackGround.png" />
+          <link rel="icon" type="image/svg+xml" href="/Blacklogo.svg" />
       </head>
       <body className={`${calSans.variable} ${dmSans.variable} ${inter.variable}`}>
         {children}
