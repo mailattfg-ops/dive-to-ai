@@ -88,6 +88,7 @@ const ExpertiseSection = () => {
               src="/marquee.png"
               alt="My Logo"
               className="h-6 w-auto object-contain transition-transform duration-300"
+              loading="lazy"
             />
           </div>
         </Marquee>

@@ -3,23 +3,32 @@ import Link from "next/link";
 import Image from "next/image";
 import { Iphone } from "./ui/iphone";
 import { VioletButton } from "./ui/violetButton";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [bgReady, setBgReady] = useState(false);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = "/HomeBackGround.png";
+    img.decode()
+      .then(() => setBgReady(true))
+      .catch(() => setBgReady(true));
+  }, []);
+
   return (
-    <section
-      className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10"
-      style={{
-         backgroundColor: "#E8D4FF",
-        backgroundImage: `
-    linear-gradient(180deg, rgba(171,93,255,0.8) 0%, white 100%),
-    url("/HomeBackGround.png")
-  `,
-        backgroundBlendMode: "hard-light",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-    >
+     <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
+      
+      {/* real image */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${
+          bgReady ? "opacity-100" : "opacity-0"
+        }`}
+        style={{ backgroundImage: `url("/HomeBackGround.png")` }}
+      />
+
+      {/* gradient layer */}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(171,93,255,0.8),white)] mix-blend-hard-light" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-4xl md:text-6xl font-cal text-gray-900 mb-2 mt-12 md:mt-24">
           Empowering Businesses
@@ -75,7 +84,7 @@ const HeroSection = () => {
           </div>
 
           <div className="relative flex flex-col items-center justify-center overflow-visible mt-2 md:mt-8 xl:mt-16">
-            <div className="relative w-full flex justify-center overflow-hidden h-[60vw] md:h-[45vw] xl:h-[35vw] max-h-[620px]">
+            <div className="relative w-full flex justify-center overflow-hidden h-[60vw] md:h-[45vw] xl:h-[30vw] max-h-[620px]">
               <div className="w-[50vw] md:w-[40vw] xl:w-[24vw] max-w-[380px]">
                 <Iphone className="mx-auto" />
               </div>
@@ -83,7 +92,7 @@ const HeroSection = () => {
 
             <div className="relative z-20 flex justify-center w-full">
               <div className="w-[80vw] md:w-[50vw] max-w-[450px] bg-white text-gray-800 font-medium p-2 md:px-4 md:pt-4 md:pb-8 xl:px-4 xl:pt-4 xl:pb-2 border-t border-l border-r border-[#B4B4B4] rounded-t-2xl md:rounded-t-4xl shadow-[4px_4px_30px_10px_rgba(0,0,0,0.15)]">
-                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-[15px] lg:text-[20px] xl:text-lg p-2 md:pb-4 md:pt-2 md:px-2 xl:px-4 xl:py-4 rounded-lg   md:rounded-2xl text-center leading-snug">
+                <div className="bg-[#E5E5E5] text-[#000000] font-sans font-medium text-xs md:text-[15px] lg:text-[18px] xl:text-lg p-2 md:pb-4 md:pt-2 md:px-2 xl:px-4 xl:py-4 rounded-lg   md:rounded-2xl text-center leading-snug">
                   Create a Social Media Plan for my Company
                 </div>
               </div>

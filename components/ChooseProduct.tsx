@@ -55,9 +55,9 @@ export default function AiJourney() {
                 src={card.image}
                 alt={card.title}
                 className="object-cover w-full h-full"
+                loading="lazy"
               />
-             <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white via-white/80 to-transparent" />
-
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-white via-white/80 to-transparent" />
             </div>
             <div className="p-6 flex flex-col grow text-center">
               <h3 className="text-lg md:text-3xl font-cal text-[#AB5DFF]">
@@ -69,7 +69,9 @@ export default function AiJourney() {
               {/* <button className="mt-4 bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center">
                 {card.button}
               </button> */}
-              <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-8 py-4 md:w-full md:max-w-none text-sm  lg:text-base xl:text-lg">{card.button}</VioletButton>
+              <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-8 py-4 md:w-full md:max-w-none text-sm  lg:text-base xl:text-lg">
+                {card.button}
+              </VioletButton>
             </div>
           </div>
         ))}
