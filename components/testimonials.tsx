@@ -54,6 +54,7 @@ export default function Testimonials() {
             src={item.image}
             alt={item.name}
             className="w-8 h-8 md:w-16 md:h-16 rounded-full object-cover"
+            loading="lazy"
           />
           <div>
             <h3 className="font-semibold text-[12px] md:text-lg leading-tight">

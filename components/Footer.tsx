@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom Text */}
         <div className="text-center text-xs text-white space-y-2">
           <p>DiveTo.AI. All rights reserved. © 2025</p>
-          <p className="hidden md:block text-[#FFFFFF] md:text-[8px] max-w-4xl mx-auto">
+          <p className="hidden md:block text-[#FFFFFF] md:text-[9px] lg:text-[10px] max-w-4xl mx-auto">
             DiveTo.AI as an educational and consultancy platform provides AI
             implementation guidance. Results may vary based on individual
             business needs and implementation.
