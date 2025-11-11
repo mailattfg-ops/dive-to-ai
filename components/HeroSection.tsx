@@ -49,7 +49,7 @@ const HeroSection = () => {
           >
             Book Your AI Strategy Call
           </Link> */}
-          <VioletButton className="px-2 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]">Book Your AI Strategy Call</VioletButton>
+          <VioletButton className="px-3 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]">Book Your AI Strategy Call</VioletButton>
 
           <button
             className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center text-[9px] md:text-[13px] lg:text-[18px] xl:text-[22px]"

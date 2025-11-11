@@ -7,7 +7,7 @@ export default function LabsSection() {
 
 
   return (
-    <section className="py-4 md:py-8 bg-white text-center">
+    <section className="py-8 bg-white text-center">
       <div className="max-w-5xl mx-auto px-6">
 
         <SectionHeader
@@ -80,7 +80,7 @@ export default function LabsSection() {
           {/* <button className="px-4 py-4 md:px-6 md:py-4 bg-[#AB5DFF] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-300">
             Collaborate with DiveTo.AI Labs
           </button> */}
-          <VioletButton className="px-2 py-2 md:px-8 md:py-3">Collaborate with DiveTo.AI Labs</VioletButton>
+          <VioletButton className="px-4 py-4 md:px-8 md:py-3">Collaborate with DiveTo.AI Labs</VioletButton>
         </div>
       </div>
     </section>

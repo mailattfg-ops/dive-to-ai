@@ -112,7 +112,7 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
                          w-[280px] sm:w-[357px] lg:w-[476px]"
               loading="lazy"
             />
-            <VioletButton className="w-full max-w-xs px-4 py-4 md:px-4 md:py-4 lg:px-8 lg:py-4 text-[17px] md:text-[15px] lg:text-[20px] xl:text-[20px]">
+            <VioletButton className="max-w-xs px-4 py-3 text-[17px] md:text-[15px] lg:text-[20px] xl:text-[20px]">
               Join the 28-Day Challenge
             </VioletButton>
           </div>
