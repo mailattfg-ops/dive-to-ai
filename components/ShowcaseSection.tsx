@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import SectionHeader from "./SectionHeader";
 import GridItem from "./LabCard";
 import { VioletButton } from "./ui/violetButton";
@@ -8,7 +7,7 @@ export default function LabsSection() {
 
 
   return (
-    <section className="hidden md:block py-4 md:py-8 bg-white text-center">
+    <section className="py-4 md:py-8 bg-white text-center">
       <div className="max-w-5xl mx-auto px-6">
 
         <SectionHeader
@@ -27,12 +26,12 @@ export default function LabsSection() {
  
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:mt-8">
 
-          <div className="contents md:flex md:flex-col md:gap-4">
+          <div className="flex flex-col gap-4">
             <GridItem
               title="Smart Manufacturing"
               imageUrl="/Smart.jpg"       
               className="
-                aspect-video 
+                aspect-[124/100]
                 md:aspect-auto md:grow-3 md:basis-0
               "
             />
@@ -41,7 +40,7 @@ export default function LabsSection() {
               imageUrl="/education.jpg"
         
               className="
-                aspect-video
+                aspect-[156/100]
                 md:aspect-auto md:grow-2 md:basis-0
               "
             />
@@ -50,7 +49,7 @@ export default function LabsSection() {
             title="Sustainable AI Solutions"
             imageUrl="/AiSolution.jpg"
             className="
-              aspect-video
+              aspect-[66/100]
               md:aspect-5/8"
           />
           <div className="contents md:flex md:flex-col md:gap-6">
@@ -59,7 +58,7 @@ export default function LabsSection() {
               imageUrl="RetailAutomation.jpg"
        
               className="
-                aspect-video
+                aspect-[156/100]
                 md:aspect-auto md:grow-2 md:basis-0
               "
             />
@@ -68,7 +67,7 @@ export default function LabsSection() {
               imageUrl="/Business.jpg"
           
               className="
-                aspect-video
+                aspect-[124/100]
                 md:aspect-auto md:grow-3 md:basis-0
               "
             />
