@@ -21,10 +21,11 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex items-center space-x-6 text-black text-sm font-inter">
           <div className="h-4 w-px bg-[#262626]" aria-hidden="true"></div>   
-          <Link href="#" className="hover:text-gray-900 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
           <Link href="#" className="hover:text-gray-900 transition-colors">About</Link>
           <Link href="#" className="hover:text-gray-900 transition-colors">Login</Link>
           <Link href="#" className="hover:text-gray-900 transition-colors">Contact</Link>
+          <Link href="/learn" className="hover:text-gray-900 transition-colors">Learn</Link>
         </div>
       </div>
       <div>

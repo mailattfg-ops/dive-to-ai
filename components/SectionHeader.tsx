@@ -1,10 +1,11 @@
 import React from "react";
 
 interface SectionHeaderProps {
-  eyebrow: string;
+  eyebrow?: string;
   description?: string;
   children: React.ReactNode;
 }
+
 export default function SectionHeader({
   eyebrow,
   description,
@@ -12,14 +13,21 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="text-center w-full max-w-3xl mx-auto px-4">
-      <p className="text-sm uppercase text-[#0A1015] tracking-wide font-semibold font-sans mt-4 md:mt-8 ">
-        {eyebrow}
-      </p>
-      <div className="text-3xl md:text-4xl font-cal mt-2">{children}</div>
+      {eyebrow && (
+        <p className="text-sm uppercase text-[#0A1015] tracking-wide font-semibold font-sans mt-4 md:mt-8">
+          {eyebrow}
+        </p>
+      )}
 
-      <p className="text-[#5C5C5C] mt-4 max-w-3xl text-[13px] lg:text-[17px] xl:text-[20px] mx-auto font-sans">
-        {description}
-      </p>
+      <div className="text-3xl md:text-4xl font-cal mt-2 leading-snug">
+        {children}
+      </div>
+
+      {description && (
+        <p className="text-[#5C5C5C] mt-4 max-w-3xl text-[13px] lg:text-[17px] xl:text-[20px] mx-auto font-sans leading-relaxed">
+          {description}
+        </p>
+      )}
     </div>
   );
 }

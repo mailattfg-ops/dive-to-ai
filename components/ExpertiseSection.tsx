@@ -1,100 +1,77 @@
-import Marquee from "react-fast-marquee";
-import SectionHeader from "./SectionHeader";
+import React from "react";
 
-const expertiseData = [
-  {
-    title: "AI for Productivity",
-    image: "/ai-productivity.jpg",
-    color: "bg-[#FF3B3BB2]",
-    icon: "/productivity.svg",
-  },
-  {
-    title: "AI for Data Analytics",
-    image: "/ai-data.jpg",
-    color: "bg-[#0059FFB2]",
-    icon: "/graphUp.svg",
-  },
-  {
-    title: "AI for Product Design",
-    image: "/ai-design.jpg",
-    color: "bg-[#FFF94BB2]",
-    icon: "/target.svg",
-  },
-  {
-    title: "AI for Marketing",
-    image: "/ai-marketing.jpg",
-    color: "bg-[#AB4BFFB2]",
-    icon: "/pencilEdit.svg",
-  },
-];
+interface ExpertiseItem {
+  title: string;
+  image?: string;      // Optional — some pages may not have images
+  color?: string;
+  icon?: string;       // Optional icon
+}
 
-const ExpertiseSection = () => {
+interface ExpertiseGridProps {
+  data: ExpertiseItem[];
+  showImages?: boolean;  // ✅ Control image display
+  showIcons?: boolean;   // ✅ Control icon display
+}
+
+export default function ExpertiseGrid({
+  data,
+  showImages = true,
+  showIcons = true,
+}: ExpertiseGridProps) {
   return (
-    <section className="bg-white overflow-hidden pt-8 xl:pt-10">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-4 xl:px-16">
-        {/* <div className="text-center max-w-2xl mx-auto">
-          <p className="font-cal text-sm font-semibold text-black tracking-wider">
-            LIMITED TIME OFFER
-          </p>
-          <h2 className="font-cal text-4xl md:text-5xl font-bold text-gray-900 mt-3">
-            Our Expertise
-          </h2>
-          <p className="mt-4 text-lg text-gray-600 md:mb-12">
-            We specialize in AI implementation across multiple business areas:
-          </p>
-        </div> */}
-        <SectionHeader
-          eyebrow=" LIMITED TIME OFFER"
-          description="We specialize in AI implementation across multiple business areas:"
+    <div
+      className="
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+        gap-0 max-w-6xl mx-auto border border-[#D5D5D5]
+        rounded-3xl overflow-hidden mt-8 md:mt-12
+      "
+    >
+      {data.map((item, i) => (
+        <div
+          key={i}
+          className="
+            relative overflow-hidden 
+            shadow-lg hover:shadow-xl 
+            transition-all duration-300
+            flex flex-col justify-end
+          "
         >
-          <h2 className="text-4xl md:text-5xl text-gray-900">Our Expertise</h2>
-        </SectionHeader>
-        <div className="mt-8 md:mt-12"></div>
-
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 max-w-6xl mx-auto border border-[#D5D5D5] rounded-3xl overflow-hidden">
-          {expertiseData.map((item, i) => (
-            <div
-              key={i}
-              className="relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-[280px] md:h-[340px] object-cover"
-              />
-
-              <div
-                className={`${item.color} absolute bottom-3 left-2 md:bottom-6 md:left-6 text-white
-  px-2 py-1 md:px-4 md:py-2 rounded-md md:rounded-xl flex flex-col items-center justify-center gap-2
-  backdrop-blur-md bg-opacity-90
-  w-32 h-20 md:w-48 md:h-28`}
-              >
-                <p className="font-normal md:font-semibold text-xs md:text-base">
-                  {item.title}
-                </p>
-
-                <span className="text-lg text-white">
-                  <img src={item.icon} className="h-8 md:h-16 object-contain" />
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="my-6 md:my-10">
-        <Marquee autoFill={true} pauseOnHover={false} speed={50}>
-          <div className="flex items-center mx-8">
+          {/* ✅ Conditionally render image */}
+          {showImages && item.image && (
             <img
-              src="/marquee.png"
-              alt="My Logo"
-              className="h-6 w-auto object-contain transition-transform duration-300"
-              loading="lazy"
+              src={item.image}
+              alt={item.title}
+              className="w-full h-[280px] md:h-[340px] object-cover"
             />
-          </div>
-        </Marquee>
-      </div>
-    </section>
-  );
-};
+          )}
 
-export default ExpertiseSection;
+          {/* ✅ Color label (always visible) */}
+          <div
+            className={`
+              ${item.color || "bg-[#AB5DFFB2]"} 
+              absolute bottom-3 left-2 md:bottom-6 md:left-6 
+              text-white px-3 py-2 md:px-4 md:py-3 
+              rounded-md md:rounded-xl 
+              flex flex-col items-center justify-center gap-2
+              backdrop-blur-md bg-opacity-90
+              w-36 h-20 md:w-48 md:h-28
+            `}
+          >
+            <p className="font-semibold text-xs md:text-base text-center leading-tight">
+              {item.title}
+            </p>
+
+            {/* ✅ Conditionally render icon */}
+            {showIcons && item.icon && (
+              <img
+                src={item.icon}
+                alt="icon"
+                className="h-8 md:h-10 object-contain"
+              />
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
