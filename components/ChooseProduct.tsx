@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeader from "./SectionHeader";
 import { VioletButton } from "./ui/violetButton";
 
@@ -66,12 +67,18 @@ export default function AiJourney() {
               <p className="text-gray-600 text-sm mt-2 grow whitespace-pre-line">
                 {card.description}
               </p>
-              {/* <button className="mt-4 bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center">
-                {card.button}
-              </button> */}
-              <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-6 py-3 text-sm  lg:text-base xl:text-lg">
-                {card.button}
-              </VioletButton>
+
+              {card.title === "Learn with DiveTo.AI" ? (
+                <Link href="/learn" className="w-full">
+                  <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-6 py-3 text-sm lg:text-base xl:text-lg">
+                    {card.button}
+                  </VioletButton>
+                </Link>
+              ) : (
+                <VioletButton className="mt-2 w-auto max-w-[300px] mx-auto px-6 py-3 text-sm lg:text-base xl:text-lg">
+                  {card.button}
+                </VioletButton>
+              )}
             </div>
           </div>
         ))}
