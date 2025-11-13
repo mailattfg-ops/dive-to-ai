@@ -38,24 +38,6 @@ export default function ChallengeSection() {
 
   return (
     <section className="bg-white text-center px-4 md:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto mt-8 md:mt-2">
-        <SectionHeader
-          eyebrow="Let's Understand"
-          description="Learn at your own pace and discover how AI can help your business grow"
-        >
-          <span className="text-[#AB5DFF]">DiveTo.AI</span> in action
-        </SectionHeader>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-6">
-          {stats.map((stat, i) => (
-            <div key={i}>
-              <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
-              <p className="text-gray-600 mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="max-w-6xl mx-auto mt-8 md:mt-10">
         <SectionHeader
           eyebrow="Let's Understand"

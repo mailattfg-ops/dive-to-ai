@@ -1,13 +1,8 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
 import SectionHeader from "./SectionHeader";
+import { useTimelineScroll } from "@/hooks/useTimelineScroll"; // Adjust this import path
 
 export default function HowItWorks() {
-  const [activeStep, setActiveStep] = useState(0);
-  const [dotPositions, setDotPositions] = useState<number[]>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const dotRefs = useRef<(HTMLDivElement | null)[]>([]);
-
   const steps = [
     {
       title: "Discovery",
@@ -31,53 +26,9 @@ export default function HowItWorks() {
     },
   ];
 
-  // Measure the absolute Y positions of dots (once rendered)
-  useEffect(() => {
-    const updateDotPositions = () => {
-      const containerTop =
-        containerRef.current?.getBoundingClientRect().top || 0;
-      const positions = dotRefs.current.map((dot) => {
-        if (!dot) return 0;
-        const rect = dot.getBoundingClientRect();
-        return rect.top - containerTop;
-      });
-      setDotPositions(positions);
-    };
-
-    updateDotPositions();
-    window.addEventListener("resize", updateDotPositions);
-    return () => window.removeEventListener("resize", updateDotPositions);
-  }, []);
-
-  // Scroll tracking
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      const section = containerRef.current;
-      const rect = section.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (rect.bottom < 0 || rect.top > windowHeight) return;
-
-      const sectionHeight = rect.height;
-      const scrollYInsideSection = Math.min(
-        Math.max(windowHeight / 2 - rect.top, 0),
-        sectionHeight
-      );
-
-      const stepHeight = sectionHeight / steps.length;
-      const currentStep = Math.min(
-        steps.length - 1,
-        Math.floor(scrollYInsideSection / stepHeight)
-      );
-
-      setActiveStep(currentStep);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [steps.length]);
+  const { activeStep, dotPositions, containerRef, dotRefs } = useTimelineScroll(
+    steps.length
+  );
 
   return (
     <section className="bg-white relative overflow-hidden">
@@ -89,21 +40,22 @@ export default function HowItWorks() {
         How <span className="text-purple-500">DiveTo.AI</span> works
       </SectionHeader>
 
-      <div ref={containerRef} className="relative mt-24 max-w-4xl mx-auto px-0.5 md:px-8 xl:px-0">
+      <div
+        ref={containerRef} 
+        className="relative mt-24 max-w-4xl mx-auto px-0.5 md:px-8 xl:px-0"
+      >
         <div className="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 top-[-60px] bottom-[-60px] w-[3px] bg-linear-to-b from-transparent via-[#DCBAFF] to-transparent" />
+        
         {dotPositions.length > 0 && (
-        <div
-  className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2 md:-translate-y-4 transition-all duration-500 ease-in-out z-10"
-  style={{ top: `${dotPositions[activeStep]}px` }}
->
-  <span className="block w-8 h-8 md:w-12 md:h-12 ml-0.5 md:ml-0 bg-[#AB5DFF66] rounded-full opacity-60"></span>
-</div>
-
+          <div
+            className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2 md:-translate-y-4 transition-all duration-500 ease-in-out z-10"
+            style={{ top: `${dotPositions[activeStep]}px` }} // `dotPositions` and `activeStep` come from the hook
+          >
+            <span className="block w-8 h-8 md:w-12 md:h-12 ml-0.5 md:ml-0 bg-[#AB5DFF66] rounded-full opacity-60"></span>
+          </div>
         )}
 
-        {/* Steps */}
-       <div className="flex flex-col gap-8 md:gap-14 relative z-10">
-
+        <div className="flex flex-col gap-8 md:gap-14 relative z-10">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -112,26 +64,27 @@ export default function HowItWorks() {
               }`}
             >
               <div
-             className={`w-full md:w-5/12 text-left md:text-${step.side === "left" ? "right" : "left"} leading-snug`}
-
+                className={`w-full md:w-5/12 text-left md:text-${
+                  step.side === "left" ? "right" : "left"
+                } leading-snug`}
               >
                 <h3
                   className={`text-xl md:text-2xl font-semibold ${
-                    activeStep === index ? "text-purple-600" : "text-[#17171C]"
+                    activeStep === index 
+                      ? "text-purple-600"
+                      : "text-[#17171C]"
                   }`}
                 >
                   {step.title}
                 </h3>
-               <p className="text-[#71717A] mt-1 md:mt-2 text-[14px] md:text-base leading-tight">
-  {step.text}
-</p>
-
+                <p className="text-[#71717A] mt-1 md:mt-2 text-[14px] md:text-base leading-tight">
+                  {step.text}
+                </p>
               </div>
 
               <div
-                ref={(el: any) => (dotRefs.current[index] = el)}
-              className="relative z-10 flex items-center justify-center w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#AB5DFF]"
-
+                ref={(el:any) => (dotRefs.current[index] = el)} 
+                className="relative z-10 flex items-center justify-center w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#AB5DFF]"
               />
 
               <div className="hidden md:block w-5/12"></div>
