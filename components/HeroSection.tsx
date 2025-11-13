@@ -19,7 +19,6 @@ const HeroSection = () => {
   return (
      <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
       
-      {/* real image */}
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${
           bgReady ? "opacity-100" : "opacity-0"
@@ -27,7 +26,6 @@ const HeroSection = () => {
         style={{ backgroundImage: `url("/HomeBackGround.png")` }}
       />
 
-      {/* gradient layer */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(171,93,255,0.8),white)] mix-blend-hard-light" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-4xl md:text-6xl font-cal text-gray-900 mb-2 mt-12 md:mt-24">

@@ -2,15 +2,15 @@ import React from "react";
 
 interface ExpertiseItem {
   title: string;
-  image?: string;      // Optional — some pages may not have images
+  image?: string;      
   color?: string;
-  icon?: string;       // Optional icon
+  icon?: string;       
 }
 
 interface ExpertiseGridProps {
   data: ExpertiseItem[];
-  showImages?: boolean;  // ✅ Control image display
-  showIcons?: boolean;   // ✅ Control icon display
+  showImages?: boolean; 
+  showIcons?: boolean;   
 }
 
 export default function ExpertiseGrid({
@@ -36,32 +36,31 @@ export default function ExpertiseGrid({
             flex flex-col justify-end
           "
         >
-          {/* ✅ Conditionally render image */}
+
           {showImages && item.image && (
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-[280px] md:h-[340px] object-cover"
+              className="w-full h-[480px] md:h-[340px] object-cover"
             />
           )}
 
-          {/* ✅ Color label (always visible) */}
+    
           <div
             className={`
               ${item.color || "bg-[#AB5DFFB2]"} 
-              absolute bottom-3 left-2 md:bottom-6 md:left-6 
+              absolute left-6 bottom-10 
               text-white px-3 py-2 md:px-4 md:py-3 
               rounded-md md:rounded-xl 
               flex flex-col items-center justify-center gap-2
               backdrop-blur-md bg-opacity-90
-              w-36 h-20 md:w-48 md:h-28
+              w-46 h-26 md:w-48 md:h-28
             `}
           >
-            <p className="font-semibold text-xs md:text-base text-center leading-tight">
+            <p className="font-semibold text-xs md:text-base xl:text-[20px] text-center leading-tight">
               {item.title}
             </p>
 
-            {/* ✅ Conditionally render icon */}
             {showIcons && item.icon && (
               <img
                 src={item.icon}

@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import StatsSection from '@/app/learn/sections/StateSection';
 import {expertiseData} from '@/data/homePageData'
 import ExpertiseSectionWrapper from '@/components/ui/ExpertiseSectionWrapper';
+import HomeExpertiseSection from '@/components/HomeExpertiseSection';
 
 
 export default function Home() {
@@ -26,12 +27,7 @@ export default function Home() {
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
       <HeroSection />
-      <ExpertiseSectionWrapper
-      eyebrow="LIMITED TIME OFFER"
-  title={<h2 className="text-4xl md:text-5xl text-gray-900">Our Expertise</h2>}
-  description="We specialize in AI implementation across multiple business areas:">
-      <ExpertiseSection data={expertiseData} showImages={true} showIcons={true}/>
-      </ExpertiseSectionWrapper>
+      <HomeExpertiseSection/>
       <Testimonials/>
       <WhyChooseSection/>
       <AiJourney/>
