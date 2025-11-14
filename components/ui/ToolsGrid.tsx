@@ -16,9 +16,9 @@ export default function ToolsGrid({ data }: ToolsGridProps) {
       <div
         className="
           grid 
-          grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 
+          grid-cols-2 md:grid-cols-4 
           gap-8 md:gap-10 
-          max-w-7xl mx-auto px-6
+          max-w-7xl mx-auto mb-6
         "
       >
         {data.map((item, i) => (
@@ -26,7 +26,7 @@ export default function ToolsGrid({ data }: ToolsGridProps) {
             key={i}
             className="
               flex flex-col items-center text-center 
-              w-full max-w-[160px] mx-auto
+              w-full max-w-40 mx-auto
             "
           >
             <div

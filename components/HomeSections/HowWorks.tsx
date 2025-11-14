@@ -1,30 +1,10 @@
 "use client";
-import SectionHeader from "./SectionHeader";
-import { useTimelineScroll } from "@/hooks/useTimelineScroll"; // Adjust this import path
+import { steps } from "@/data/homePageData";
+import SectionHeader from "../SectionHeader";
+import { useTimelineScroll } from "@/hooks/useTimelineScroll"; 
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      title: "Discovery",
-      text: "Define your goals and identify AI opportunities.",
-      side: "right",
-    },
-    {
-      title: "Implementation",
-      text: "Deploy tools, systems, and automation tailored to your business.",
-      side: "left",
-    },
-    {
-      title: "Training",
-      text: "Upskill your team with AI literacy and hands-on tools.",
-      side: "right",
-    },
-    {
-      title: "Optimization",
-      text: "Measure performance and continuously improve results.",
-      side: "left",
-    },
-  ];
+ 
 
   const { activeStep, dotPositions, containerRef, dotRefs } = useTimelineScroll(
     steps.length

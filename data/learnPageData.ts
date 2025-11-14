@@ -56,7 +56,6 @@ export const expertiseData = [
 
   export const toolsData = [
   { icon: "/Image/Icon/ChatGPT.svg", title: "ChatGPT", subtitle: "Chatbots" },
-  { icon: "/Image/Icon/claude-ai.svg", title: "Claude", subtitle: "Chatbots" },
   { icon: "/Image/Icon/Bing.svg", title: "Bing Chat", subtitle: "Chatbots" },
 
   { icon: "/Image/Icon/jasper.svg", title: "Jasper", subtitle: "Content" },
@@ -71,8 +70,7 @@ export const expertiseData = [
 
   { icon: "/Image/Icon/deepseek.svg", title: "DeepSeek", subtitle: "Chatbots" },
 
-  { icon: "/Image/Icon/Grok.svg", title: "Grok", subtitle: "Chatbots" },
-  { icon: "/Image/Icon/NovelAI.svg", title: "Novel", subtitle: "Imgae Generator" },
+  { icon: "/Image/Icon/NovelAI.svg", title: "Novel", subtitle: "Image Generator" },
 
 ];
 

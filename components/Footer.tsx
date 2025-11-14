@@ -20,14 +20,12 @@ export default function Footer() {
               Your partner in AI implementation and business transformation
             </p>
           </div>
-
-          {/* Links Section */}
           <div className="flex flex-col space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:col-span-3">
             <div>
               <h4 className="text-white font-semibold mb-2">Platform</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-white">
+                  <a href="/" className="text-white">
                     Home
                   </a>
                 </li>

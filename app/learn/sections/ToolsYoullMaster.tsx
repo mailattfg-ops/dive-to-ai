@@ -5,7 +5,7 @@ import { toolsData } from "@/data/learnPageData";
 
 export default function ToolsYouMaster() {
   return (
-    <section className="w-full bg-white pt-4 md:pt-8 lg:pt-12">
+    <section className="w-full bg-white pt-10">
       <div className="max-w-7xl mx-auto text-center">
         <SectionHeader
           eyebrow="Let’s Understand"

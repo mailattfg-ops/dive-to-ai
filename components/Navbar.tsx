@@ -11,10 +11,7 @@ const Navbar = () => {
   return (
     <nav className="relative z-50 bg-white border-b border-gray-100">
       <div className="flex items-center justify-between p-4 px-8 md:px-16 lg:px-8 py-6">
-
-        {/* LEFT SECTION — Logo + Desktop Links Together */}
         <div className="flex items-center space-x-6">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/Blacklogo.svg"
@@ -29,22 +26,33 @@ const Navbar = () => {
           {/* Desktop Menu (now right next to logo) */}
           <div className="hidden md:flex items-center space-x-6 text-black text-sm font-inter">
             <div className="h-4 w-px bg-[#262626]" />
-            <Link href="/" className="hover:text-gray-800">Home</Link>
-            <Link href="#" className="hover:text-gray-800">About</Link>
-            <Link href="#" className="hover:text-gray-800">Login</Link>
-            <Link href="#" className="hover:text-gray-800">Contact</Link>
-            <Link href="/learn" className="hover:text-gray-800">Learn</Link>
+            <Link href="/" className="hover:text-gray-800">
+              Home
+            </Link>
+            <Link href="#" className="hover:text-gray-800">
+              About
+            </Link>
+            <Link href="#" className="hover:text-gray-800">
+              Login
+            </Link>
+            <Link href="#" className="hover:text-gray-800">
+              Contact
+            </Link>
+            <Link href="/learn" className="hover:text-gray-800">
+              Learn
+            </Link>
           </div>
         </div>
 
-        {/* RIGHT SECTION — Get Started Button */}
         <div className="hidden md:block">
-         <Link href="#" className="font-cal bg-black text-white rounded-full py-2 text-xs px-4 md:text-sm md:py-3 md:px-4">
-          Get started
-        </Link>
+          <Link
+            href="#"
+            className="font-cal bg-black text-white rounded-full py-2 text-xs px-4 md:text-sm md:py-3 md:px-4"
+          >
+            Get started
+          </Link>
         </div>
 
-        {/* MOBILE HAMBURGER */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 rounded-lg border border-gray-300"
@@ -53,15 +61,24 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
       {open && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200 animate-slideDown p-6 md:hidden">
           <div className="flex flex-col space-y-6 text-black text-base font-inter">
-            <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-            <Link href="#" onClick={() => setOpen(false)}>About</Link>
-            <Link href="#" onClick={() => setOpen(false)}>Login</Link>
-            <Link href="#" onClick={() => setOpen(false)}>Contact</Link>
-            <Link href="/learn" onClick={() => setOpen(false)}>Learn</Link>
+            <Link href="/" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              About
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              Login
+            </Link>
+            <Link href="#" onClick={() => setOpen(false)}>
+              Contact
+            </Link>
+            <Link href="/learn" onClick={() => setOpen(false)}>
+              Learn
+            </Link>
 
             <Link
               href="#"

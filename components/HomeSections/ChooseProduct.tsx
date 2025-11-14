@@ -1,31 +1,10 @@
 import Link from "next/link";
-import SectionHeader from "./SectionHeader";
-import { VioletButton } from "./ui/violetButton";
+import SectionHeader from "../SectionHeader";
+import { VioletButton } from "../ui/violetButton";
+import { cards } from "@/data/homePageData";
 
 export default function AiJourney() {
-  const cards = [
-    {
-      title: "AI Consulting for Businesses",
-      description:
-        "Get expert guidance to integrate AI into your workflow — from automation and analytics to marketing and customer experience.\n→ Book a Consulting Call",
-      button: "Book a Consulting Call",
-      image: "/product1.jpg",
-    },
-    {
-      title: "AI Product R&D",
-      description:
-        "Collaborate with our R&D team to develop AI-driven tools, prototypes, and intelligent systems tailored to your organization's goals.",
-      button: "Partner with DiveTo.AI Labs",
-      image: "/product2.jpg",
-    },
-    {
-      title: "Learn with DiveTo.AI",
-      description:
-        "Participate in our hands-on experiences, such as the 14-Day AI Product Development Challenge and the 28-Day AI Implementation Challenge, to master AI tools and create your own AI projects.",
-      button: "Visit Learn with DiveToAI",
-      image: "/product3.jpg",
-    },
-  ];
+  
 
   return (
     <section className="py-8 px-4 md:px-14 lg:px-8 text-center bg-white">

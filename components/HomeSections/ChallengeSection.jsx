@@ -1,17 +1,10 @@
 "use client";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "../SectionHeader";
 import { Calendar, Trophy, Users, Target } from "lucide-react";
-import { VioletButton } from "./ui/violetButton"; // Make sure this path is correct
+import { VioletButton } from "../ui/violetButton"; 
 
 export default function ChallengeSection() {
   const calendar = "/calendar.png";
-
-  const stats = [
-    { value: "10,000+", label: "Professionals Upskilled" },
-    { value: "50,000+", label: "Hours of mentoring delivered" },
-    { value: "500+", label: "AI solutions implemented" },
-    { value: "100+", label: "Research Projects Supported" },
-  ];
 
   const features = [
     {
@@ -49,8 +42,6 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
           Development Challenge
         </SectionHeader>
       </div>
-
-      {/* --- MODIFICATIONS ARE IN THIS BLOCK --- */}
       <div
         className="relative w-full max-w-6xl mx-auto mt-10 rounded-3xl 
            bg-linear-to-b from-[#F9F5FF] via-[#F3E8FF] to-[#ECECFF]
@@ -59,9 +50,6 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
           px-6 md:px-10 py-10"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          
-          {/* --- TOP (on mobile) / LEFT (on desktop) --- */}
-          {/* This block is first, so it's on top for mobile */}
           <div className="space-y-8">
             {features.map((feature, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -84,8 +72,6 @@ Choose from tracks like Education, Food Tech, Retail, and E-commerce."
             ))}
           </div>
 
-          {/* --- BOTTOM (on mobile) / RIGHT (on desktop) --- */}
-          {/* This block is second, so it's on the bottom for mobile */}
           <div className="flex flex-col items-center justify-center gap-6 lg:gap-8">
             <img
               src={calendar}

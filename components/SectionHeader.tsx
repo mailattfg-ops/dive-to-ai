@@ -24,7 +24,7 @@ export default function SectionHeader({
       </div>
 
       {description && (
-        <p className="text-[#5C5C5C] mt-4 max-w-3xl text-[13px] lg:text-[17px] xl:text-[20px] mx-auto font-sans leading-relaxed">
+        <p className="max-w-lg lg:max-w-3xl text-[#5C5C5C] mt-2 md:mt-4 text-[13px] lg:text-[17px] xl:text-[20px] mx-auto font-sans leading-relaxed">
           {description}
         </p>
       )}

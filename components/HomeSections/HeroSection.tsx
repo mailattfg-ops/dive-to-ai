@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
-import { Iphone } from "./ui/iphone";
-import { VioletButton } from "./ui/violetButton";
+import { Iphone } from "../ui/iphone";
+import { VioletButton } from "../ui/violetButton";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {

@@ -11,7 +11,7 @@ export default function WhatYouWillBuild() {
   ];
 
   return (
-    <section className="w-full bg-white text-center pt-4 md:pt-8 lg:pt-12 px-4 md:px-8 lg:px-4 xl:px-16">
+    <section className="w-full bg-white text-center pt-10 px-4 md:px-8 lg:px-4 xl:px-16">
       <SectionHeader eyebrow="Let’s Understand" description="">
         What <span className="text-[#AB5DFF]">You’ll Build</span>
       </SectionHeader>

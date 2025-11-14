@@ -52,12 +52,12 @@ export default function ExpertiseGrid({
               absolute left-6 bottom-10 
               text-white px-3 py-2 md:px-4 md:py-3 
               rounded-md md:rounded-xl 
-              flex flex-col items-center justify-center gap-2
+              flex flex-col items-start justify-center gap-2
               backdrop-blur-md bg-opacity-90
               w-46 h-26 md:w-48 md:h-28
             `}
           >
-            <p className="font-semibold text-xs md:text-base xl:text-[20px] text-center leading-tight">
+            <p className="font-semibold text-[16px] text-left leading-tight">
               {item.title}
             </p>
 
@@ -65,7 +65,7 @@ export default function ExpertiseGrid({
               <img
                 src={item.icon}
                 alt="icon"
-                className="h-8 md:h-10 object-contain"
+                className="h-8 md:h-10 object-contain self-center"
               />
             )}
           </div>

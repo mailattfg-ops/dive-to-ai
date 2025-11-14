@@ -61,7 +61,7 @@ export default function LearnHero() {
 
         <VioletButton
           className="
-            mt-6 sm:mt-8 
+            mt-6 
             px-4 py-2 
             sm:px-6 sm:py-3 
             md:px-6 md:py-4 

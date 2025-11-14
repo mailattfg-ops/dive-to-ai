@@ -1,7 +1,7 @@
 "use client";
-import SectionHeader from "./SectionHeader";
-import GridItem from "./LabCard";
-import { VioletButton } from "./ui/violetButton";
+import SectionHeader from "../SectionHeader";
+import GridItem from "../LabCard";
+import { VioletButton } from "../ui/violetButton";
 
 export default function LabsSection() {
   return (
@@ -67,9 +67,7 @@ export default function LabsSection() {
         </div>
 
         <div className="mt-10">
-          {/* <button className="px-4 py-4 md:px-6 md:py-4 bg-[#AB5DFF] hover:opacity-90 text-white font-medium rounded-full shadow-md transition-all duration-300">
-            Collaborate with DiveTo.AI Labs
-          </button> */}
+        
           <VioletButton className="px-4 py-4 md:px-8 md:py-3">
             Collaborate with DiveTo.AI Labs
           </VioletButton>
