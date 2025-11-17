@@ -135,7 +135,37 @@
   font-family: var(--font-inter), sans-serif;
 }
 
+/*
+ * In your global.css
+ * Fix for Calendly popup responsiveness and scrollbars
+ */
 
+/* 1. Prevent the main page (body) from scrolling when the popup is open */
+body.calendly-popup-open {
+  overflow: hidden !important;
+}
+
+/* 2. Make the popup container responsive */
+.calendly-popup-content {
+  /* Use viewport units for better mobile responsiveness */
+  width: 90vw !important;
+  height: 90vh !important;
+  
+  /* Ensure it doesn't get too big on desktop */
+  max-width: 1000px !important;
+  max-height: 700px !important;
+
+  /* Remove any default margin/padding that might cause issues */
+  margin: auto !important;
+  inset: 0 !important;
+  transform: translate(0, 0) !important; /* Override default centering if it's problematic */
+}
+
+/* 3. Force the iframe inside to fill the container */
+.calendly-popup-content iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
 
 
 
