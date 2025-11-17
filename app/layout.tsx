@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
         />

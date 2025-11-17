@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Iphone } from "../ui/iphone";
 import { VioletButton } from "../ui/violetButton";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const HeroSection = () => {
   const [bgReady, setBgReady] = useState(false);
@@ -10,14 +11,25 @@ const HeroSection = () => {
   useEffect(() => {
     const img = new window.Image();
     img.src = "/HomeBackGround.png";
-    img.decode()
+    img
+      .decode()
       .then(() => setBgReady(true))
       .catch(() => setBgReady(true));
   }, []);
 
+  const openCalendly = () => {
+    if (!window.Calendly) {
+      console.error("Calendly script not loaded yet.");
+      return;
+    }
+
+    window.Calendly.initPopupWidget({
+      url: "https://calendly.com/apasif243/30min"
+    });
+  };
+
   return (
-     <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
-      
+    <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${
           bgReady ? "opacity-100" : "opacity-0"
@@ -39,20 +51,22 @@ const HeroSection = () => {
           solutions.
         </p>
 
-          <div className="flex flex-row gap-2 md:gap-8 justify-center mb-8 md:mb-0 text-[8px] md:text-lg font-cal">
+        <div className="flex flex-row gap-2 md:gap-8 justify-center mb-8 md:mb-0 text-[8px] md:text-lg font-cal">
           {/* <Link
             href="#"
             className="bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center"
           >
             Book Your AI Strategy Call
           </Link> */}
-          <VioletButton className="px-3 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]">Book Your AI Strategy Call</VioletButton>
+          <VioletButton className="px-3 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]" onClick={openCalendly}>
+            Book Your AI Strategy Call
+          </VioletButton>
 
-          <button
-            className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center text-[9px] md:text-[13px] lg:text-[18px] xl:text-[22px]"
-          >
-            Explore the 14-Day Product Challenge
-          </button>
+          <Link href="/learn">
+            <button className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center text-[9px] md:text-[13px] lg:text-[18px] xl:text-[22px] cursor-pointer">
+              Explore the 14-Day Product Challenge
+            </button>
+          </Link>
         </div>
 
         <div className="relative flex flex-col items-center justify-center">

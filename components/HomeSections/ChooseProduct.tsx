@@ -8,32 +8,17 @@ import { cards } from "@/data/homePageData";
 
 export default function AiJourney() {
 
-  // Detect popup open/close
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-      const popup = document.querySelector(".calendly-overlay");
-
-      if (popup) {
-        // Popup opened
-        document.body.style.overflow = "hidden";
-        document.documentElement.style.overflow = "hidden"; 
-      } else {
-        // Popup closed
-        document.body.style.overflow = "";
-        document.documentElement.style.overflow = "";
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, []);
-
   const openCalendly = () => {
+    if (!window.Calendly) {
+      console.error("Calendly script not loaded yet.");
+      return;
+    }
+
     window.Calendly.initPopupWidget({
       url: "https://calendly.com/apasif243/30min"
     });
   };
+
 
   return (
     <section className="py-8 px-4 md:px-14 lg:px-8 text-center bg-white">
