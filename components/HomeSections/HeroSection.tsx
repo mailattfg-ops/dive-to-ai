@@ -3,21 +3,30 @@ import Image from "next/image";
 import { Iphone } from "../ui/iphone";
 import { VioletButton } from "../ui/violetButton";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { InlineWidget } from "react-calendly";
 
 const HeroSection = () => {
   const [bgReady, setBgReady] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const img = new window.Image();
     img.src = "/HomeBackGround.png";
-    img.decode()
+    img
+      .decode()
       .then(() => setBgReady(true))
       .catch(() => setBgReady(true));
   }, []);
 
+
+  const openCalendly = () => {
+    setIsModalOpen(true);
+  };
+
   return (
-     <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
-      
+
+    <section className="relative overflow-hidden rounded-[40px] mx-2 md:mx-4 border border-[#C4C4C4] pt-4 md:pt-10">
       <div
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${
           bgReady ? "opacity-100" : "opacity-0"
@@ -27,10 +36,11 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(171,93,255,0.8),white)] mix-blend-hard-light" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        
         <h1 className="text-4xl md:text-6xl font-cal text-gray-900 mb-2 mt-12 md:mt-24">
           Empowering Businesses
           <br />
-          to Innovate with <span className="text-[#AB5DFF]">AI</span>
+          to Innovate with AI
         </h1>
 
         <p className="text-sm md:text-xl font-sans text-[#828282] mb-3 max-w-3xl mx-auto">
@@ -39,21 +49,20 @@ const HeroSection = () => {
           solutions.
         </p>
 
-          <div className="flex flex-row gap-2 md:gap-8 justify-center mb-8 md:mb-0 text-[8px] md:text-lg font-cal">
-          {/* <Link
-            href="#"
-            className="bg-[#AB5DFF] text-white px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-700 transition-colors shadow-md text-center"
-          >
-            Book Your AI Strategy Call
-          </Link> */}
-          <VioletButton className="px-3 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]">Book Your AI Strategy Call</VioletButton>
+        <div className="flex flex-row gap-2 md:gap-8 justify-center mb-8 md:mb-0 text-[8px] md:text-lg font-cal">
 
-          <button
-            className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center text-[9px] md:text-[13px] lg:text-[18px] xl:text-[22px]"
-          >
-            Explore the 14-Day Product Challenge
-          </button>
+          <VioletButton className="px-3 py-2 md:px-8 md:py-3 text-[8px] md:text-[13px] lg:text-[18px] xl:text-[22px]" onClick={openCalendly}>
+            Book Your AI Strategy Call
+          </VioletButton>
+
+          <Link href="/learn">
+            <button className="bg-white border border-[#AB5DFF] text-[#AB5DFF] px-2 py-2 md:px-8 md:py-3 rounded-full hover:bg-purple-50 transition-colors shadow-md text-center text-[9px] md:text-[13px] lg:text-[18px] xl:text-[22px] cursor-pointer">
+              Explore the 14-Day Product Challenge
+            </button>
+          </Link>
         </div>
+        
+  
 
         <div className="relative flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 md:gap-4 pl-2 md:px-4 md:py-2 rounded-full mb-6 md:mb-0 md:mt-8 xl:hidden">
@@ -99,6 +108,7 @@ const HeroSection = () => {
       </div>
 
       <div className="hidden xl:flex absolute bottom-6 left-6 items-center gap-3 px-4 py-2 rounded-full ">
+    
         <p className="font-semibold font-sans text-black text-lg whitespace-nowrap">
           JOIN OVER 10,000
           <br />
@@ -121,6 +131,34 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
+
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative w-11/12 md:w-3/4 lg:w-2/3 max-w-4xl h-5/6 max-h-[700px] bg-white rounded-2xl shadow-xl flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute -top-3 -right-3 z-10 p-2 bg-white rounded-full text-gray-700 shadow-md hover:bg-gray-200 transition"
+              aria-label="Close"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <div className="w-full h-full rounded-2xl overflow-hidden">
+              <InlineWidget
+                url="https://calendly.com/divetoaimail/30min"
+                styles={{ height: '100%', width: '100%' }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

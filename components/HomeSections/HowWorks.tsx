@@ -28,8 +28,8 @@ export default function HowItWorks() {
         
         {dotPositions.length > 0 && (
           <div
-            className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2 md:-translate-y-4 transition-all duration-500 ease-in-out z-10"
-            style={{ top: `${dotPositions[activeStep]}px` }} // `dotPositions` and `activeStep` come from the hook
+            className="absolute left-1.5 md:left-1/2 transform md:-translate-x-1/2 -translate-y-2.5 md:-translate-y-4 transition-all duration-500 ease-in-out z-10"
+            style={{ top: `${dotPositions[activeStep]}px` }}
           >
             <span className="block w-8 h-8 md:w-12 md:h-12 ml-0.5 md:ml-0 bg-[#AB5DFF66] rounded-full opacity-60"></span>
           </div>
@@ -64,7 +64,7 @@ export default function HowItWorks() {
 
               <div
                 ref={(el:any) => (dotRefs.current[index] = el)} 
-                className="relative z-10 flex items-center justify-center w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-[#AB5DFF]"
+                className="relative z-10 flex items-center justify-center w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#AB5DFF]"
               />
 
               <div className="hidden md:block w-5/12"></div>

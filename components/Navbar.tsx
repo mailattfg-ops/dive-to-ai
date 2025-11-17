@@ -9,15 +9,15 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 bg-white border-b border-gray-100">
-      <div className="flex items-center justify-between p-4 px-8 md:px-16 lg:px-8 py-6">
+    <nav className="relative z-50 bg-white">
+      <div className="flex items-center justify-between p-4 md:px-16 lg:px-8 py-6">
         <div className="flex items-center space-x-6">
           <Link href="/" className="flex items-center">
             <Image
               src="/Blacklogo.svg"
               alt="Logo"
               width={24}
-              height={32}
+              height={32} 
               priority
             />
             <span className="font-cal text-lg text-black">DiveTo.ai</span>
